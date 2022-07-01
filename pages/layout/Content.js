@@ -26,13 +26,18 @@ export default function Content() {
         ))}
       </div>
 
-      <ul className="border-blue-700 border-8">
-        <ul className="h-60 overflow-y-scroll">
+      <div className="grid grid-cols-6 gap-3 h-[300px] overflow-hidden overflow-y-scroll">
           {posts.map((post) => (
-            <li className="overflow-hidden pl-10" key={post.id}>{post.title || post.name}</li>
+              <div className="pl-2 rounded border-2 border-blue-600" key={post.id}>
+                <h3 className="text-2xl">{post.title || post.name}</h3>
+                <p>{post.body}</p>
+                <div className="overflow-hidden">
+                <a className="font-bold" href={post.email}>{post.email}</a>
+                </div>
+               
+              </div>
           ))}
-        </ul>
-      </ul>
+      </div>
 
     </div>
   );
