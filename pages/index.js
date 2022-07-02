@@ -1,9 +1,12 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import Header from './layout/Header'
+import Header from './layout/Header.js'
 import Blog from './layout/Blog'
 import Footer from './layout/Footer'
+import Api from './Api'
+import Post from './post'
+import { useEffect, useState } from 'react'
 
 export default function Home() {
   return (
@@ -14,14 +17,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className=''>
+      <main className='max-w-[1230px] mx-auto'>
           <Header/>
           <Blog/>
-      </main>
-
-      <footer className=''>
           <Footer/>
-      </footer>
+          <Api/>
+      </main>
+      <Post/>
     </div>
   )
 }

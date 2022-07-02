@@ -1,3 +1,9 @@
+@import './mains.module.scss';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.button-active {
+    @apply fixed
+}

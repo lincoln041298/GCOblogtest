@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Button from "../components/Button.js";
 import imagedemo from "../../public/theweeknd.webp";
-import Content from "./Content.js";
+import Content from "../layout/Content.js";
 export default function Blog() {
   return (
     <>
@@ -17,7 +17,7 @@ export default function Blog() {
         </div>
         <div className="img  flex items-center justify-center basis-1/2">
           <p className="w-60">
-            <Image className="rounded-full" src={imagedemo}></Image>
+            <Image alt="a" className="rounded-full" src={imagedemo}></Image>
           </p>
         </div>
       </section>
